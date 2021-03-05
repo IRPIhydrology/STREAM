@@ -1,0 +1,64 @@
+	      STREAM : Satellite-based Runoff Evaluation and Mapping 
+	-----------------------------------------------------------------------------------------
+
+	          TUTORIAL for the use of the Matlab STREAM CODE
+
+	-----------------------------------------------------------------------------------------
+
+	
+	STREAM is a semidistributed conceptual hydrological model for estimating runoff and river discharge from rainfall, soil moisture, air temperature 
+	and terrestrial water storage data.
+	The STREAM model can be freely applied and used, just cite some the reference to the model reported below.
+	The authors are highly interested to collaborate for the understanding of the model functioning and to improve its performance and applicability.
+
+	
+	For any questions please do not hesitate to contact:
+
+	stefania.camici@irpi.cnr.it
+
+	REFERENCE: Camici, S., Giuliani, G., Brocca, L., Massari, C., Tarpanelli, A., Farahani, H. H., ... & Benveniste, J. (2021). Synergy between satellite
+	observations of soil moisture and water storage anomalies for global runoff estimation. Geoscientific Model Development Discussions, 1-38. 
+	https://gmd.copernicus.org/preprints/gmd-2020-399/gmd-2020-399.pdf
+
+	-----------------------------------------------------------------------------------------	
+
+	The following files are distributed:
+
+	1) MATLAB codes:
+
+	1.1) "STREAM_semidistributed.m": STREAM model
+	1.2) " cal_STREAM_semidistributed.m": code for STREAM model calibration (requires optimization toolbox)
+	1.3) " run_STREAM_semidistributed.m": script for running the calibration of SM2RAIN and creating the output figure
+	1.4) " perf.m": script for computing performance scores
+
+	2) Auxiliary file:
+
+	2.1) "Mississippi_basin.png": Mississippi sub-basins and gauging stations;
+	2.2) "topology_Mississippi.csv": topology of Mississippi basin;
+	2.3) "distance_Mississippi.txt": distance of each sub-basin to closure section;
+	2.4) "GIUH": Geomorphological Instantaneous Unit Hydrograph;
+	2.5) "X_opt_Mississippi.txt": contains the eight STREAM model parameters
+
+	    alpha = PAR(1,i); % exponent of the infiltration 
+   	    T1    = PAR(2,i); % characteristic time length
+	    gamma = PAR(3,i); % parameter of GIUH
+	    C     = PAR(4,i); % Celerity
+	    Diff  = PAR(5,i); % Diffusivity
+	    Ks    = PAR(6,i); % soil hydraulic conductivity
+	    m     = PAR(7,i); % exponent of drainage
+	    Cm    = PAR(8,i); % degree-day coefficient for snow module
+
+	3) INPUT file (example):
+
+	3.1) "input.mat": example file for gridded daily data for Mississippi. It contains, basin_data and temperature cells for each sub-basin.
+	"basin_data" contains:
+	     a) date (in numeric Matlab format)
+	     b) precipitation amount (in mm)
+	     c) soil moisture (dimensionless: degree of saturation)
+	     d) river discharge (where availale in m3/s)
+	     e) terrestrial water storage anomaly 
+	"temperature" contains:
+	     a) air temperature data (°C)
+
+	3.2) "staz_checkMississippi.mat": river discharge data over the Mississippi river basin
+
