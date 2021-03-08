@@ -1,4 +1,5 @@
-# STREAM- version 1.0
+=======
+STREAM- version 1.0
 =======
 
 Matlab implementation of STREAM (SaTellite based Runoff Evaluation And Mapping) model, version 1.0 [Camici_etal_2021]_.
