@@ -39,14 +39,14 @@
 	2.4) "GIUH": Geomorphological Instantaneous Unit Hydrograph;
 	2.5) "X_opt_Mississippi.txt": contains the eight STREAM model parameters
 
-	    alpha = PAR(1,i); % exponent of the infiltration 
-   	    T1    = PAR(2,i); % characteristic time length
-	    gamma = PAR(3,i); % parameter of GIUH
-	    C     = PAR(4,i); % Celerity
-	    Diff  = PAR(5,i); % Diffusivity
-	    Ks    = PAR(6,i); % soil hydraulic conductivity
-	    m     = PAR(7,i); % exponent of drainage
-	    Cm    = PAR(8,i); % degree-day coefficient for snow module
+	       alpha = PAR(1,i); % exponent of the infiltration 
+    	        T    = PAR(2,i);  % characteristic time length
+	       gamma = PAR(3,i); % parameter of GIUH
+	       C     = PAR(4,i); % Celerity
+               Diff  = PAR(5,i); % Diffusivity
+               beta  = PAR(6,i); % coefficient relationship between slow runoff component and TWSA
+               m     = PAR(7,i); % exponent relationship between slow runoff component and TWSA
+               Cm    = PAR(8,i); % degree-day coefficient for snow module
 
 	3) INPUT file (example):
 
