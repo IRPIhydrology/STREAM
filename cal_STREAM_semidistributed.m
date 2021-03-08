@@ -22,7 +22,7 @@ PAR=repmat(X,1,Nbas);
 errore=1-KGE_out;
 %---------------------------------------------------------------------------------
 function X=convert_adim(X_0,Nbas)
-%     alpha    T1  gamma  C   D    Ks     m     Cm
+%     alpha    T   gamma  C   D  beta    m     Cm
 LOW=[   1.0  0.01   0.5   1   1   0.1     1   0.1/24]';
 UP =[  30.0    80   5.5  60  30    20    15     3   ]';
 

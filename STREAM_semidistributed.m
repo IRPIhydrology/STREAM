@@ -34,12 +34,12 @@ rr_tot=cell(1,Nbas);
 for i=1:Nbas
     
     alpha = PAR(1,i); % exponent of the infiltration 
-    T1    = PAR(2,i); % characteristic time length
+    T    = PAR(2,i);  % characteristic time length
     gamma = PAR(3,i); % parameter of GIUH
     C     = PAR(4,i); % Celerity
     Diff  = PAR(5,i); % Diffusivity
-    Ks    = PAR(6,i); % soil hydraulic conductivity
-    m     = PAR(7,i); % exponent of drainage
+    beta  = PAR(6,i); % coefficient relationship between slow runoff component and TWSA
+    m     = PAR(7,i); % exponent relationship between slow runoff component and TWSA
     Cm    = PAR(8,i); % degree-day coefficient for snow module
     
     
@@ -70,7 +70,7 @@ for i=1:Nbas
     [PIO,SWE]=snow_model(PIO_, TEMPER, -0.5, 0.5, Cm);
     
     %  Soil Water Index comnputation
-    SWI = SWIcomp_NAN([D,SM],T1);
+    SWI = SWIcomp_NAN([D,SM],T);
     W1 =(SWI-nanmin(SWI))./((nanmax(SWI)-nanmin(SWI)));
     
     W2=(TWSA-nanmin(TWSA))./((nanmax(TWSA)-nanmin(TWSA)));
@@ -81,7 +81,7 @@ for i=1:Nbas
     
     for jj=1:size(PIO,2)
         peff(:,jj)=PIO(:,jj).*(W1(:,jj).^alpha); % Georgakakos and Baumer (1996)
-        BF  (:,jj)=Ks.*(W2(:,jj)).^(m);
+        BF  (:,jj)=beta.*(W2(:,jj)).^(m);
     end
     
     rr_tot {i}= (peff+BF);
