@@ -30,6 +30,8 @@
 	1.2) " cal_STREAM_semidistributed.m": code for STREAM model calibration (requires optimization toolbox)
 	1.3) " run_STREAM_semidistributed.m": script for running the calibration of SM2RAIN and creating the output figure
 	1.4) " perf.m": script for computing performance scores
+	1.5) " klinggupta.m": script for computing the kling-Gupta efficiency index
+
 
 	2) Auxiliary file:
 
