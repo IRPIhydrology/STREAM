@@ -27,8 +27,8 @@ X_OPT= load(['X_opt_',name_bas,'.txt']);
 [NS,KGE_sez,KGE_out,Qsim_out,QB_out,rr_tot]=STREAM_semidistributed(input_cut,BAS_PAR,EBRR_BASPAR,X_OPT,sez_outlet,bas_check,ID_bas_app,1);
 
 %% River discharge comparison for calibrated sections 
-basin_data = input_cut.basin_data;
-temperature= input_cut.temperature;
+basin_data = input.basin_data;
+temperature= input.temperature;
 sez_check= [9,6,4,11];
 
 close all
