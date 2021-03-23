@@ -64,7 +64,7 @@
 
 	3.2) "staz_checkMississippi.mat": river discharge data over the Mississippi river basin
 
-	-----------------------------------------------------------------------------------------
+	------------------------STEP by STEP PROCEDURE TO RUN STREAM MODEL-----------------------------------------------------------------
 	0. Subbasin delineation. Before to run the STREAM model, a basin delineation has to be carried out. Once selected the closure sections (Nsect) over the river, 
 				 this operation allows to identify the subbasins (Nbas) of the river basin. For instance, the basin delineation could be carried out 
 				 through Qgis software (https://docs.qgis.org/3.16/en/docs/training_manual/processing/hydro.html?highlight=hydrological%20analysis).
