@@ -1,4 +1,4 @@
-#       STREAM : Satellite-based Runoff Evaluation and Mapping 
+                  STREAM : Satellite-based Runoff Evaluation and Mapping 
         -----------------------------------------------------------------------------------------
 
 	          TUTORIAL for the use of the Matlab STREAM CODE
