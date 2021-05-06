@@ -27,7 +27,7 @@
 
 	The following files are distributed:
 
-	1) MATLAB codes:
+	1) M codes:
 
 	1.1) "STREAM_semidistributed.m": STREAM model
 	1.2) " cal_STREAM_semidistributed.m": code for STREAM model calibration (requires optimization toolbox)
