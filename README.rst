@@ -1,8 +1,8 @@
 =======
-STREAM- version 1.1
+STREAM- version 1.2
 =======
 
-Matlab implementation of STREAM (SaTellite based Runoff Evaluation And Mapping) model, version 1.0 [Camici_etal_2021]_.
+Implementation of STREAM (SaTellite based Runoff Evaluation And Mapping) model, version 1.2 [Camici_etal_2021]_.
 https://doi.org/10.5281/zenodo.4588304
 
 In Test_data and Results you can find the dataset for testing the code and the corresponding results.
