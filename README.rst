@@ -48,7 +48,6 @@ The following files are distributed:
 	2.3 "distance_Mississippi.txt": distance of each sub-basin to closure section;
 	2.4 "GIUH": Geomorphological Instantaneous Unit Hydrograph;
 	2.5 "X_opt_Mississippi.txt": contains the eight STREAM model parameters
-
 	       alpha = PAR(1,i); % exponent of the infiltration 
     	        T    = PAR(2,i);  % characteristic time length
 	       gamma = PAR(3,i); % parameter of GIUH
