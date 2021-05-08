@@ -61,11 +61,11 @@ The following files are distributed:
 
 	3.1 "input.mat": example file for gridded daily data for Mississippi. It contains, basin_data and temperature cells for each sub-basin.
 	"basin_data" contains:
-	     a) date (in numeric Matlab format)
-	     b) precipitation amount (in mm)
-	     c) soil moisture (dimensionless: degree of saturation)
-	     d) river discharge (where availale in m3/s)
-	     e) terrestrial water storage anomaly 
+	     - date (in numeric Matlab format)
+	     - precipitation amount (in mm)
+	     - soil moisture (dimensionless: degree of saturation)
+	     - river discharge (where availale in m^3/s)
+	     - terrestrial water storage anomaly 
 	"temperature" contains:
 	     a) air temperature data (°C)
 
