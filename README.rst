@@ -74,12 +74,10 @@ The following files are distributed:
    
 STEP by STEP PROCEDURE TO RUN STREAM MODEL
 ==========
-0. Subbasin delineation. Before to run the STREAM model, a basin delineation has to be carried out. Once selected the closure sections (Nsect) over the river, 
-				 this operation allows to identify the subbasins (Nbas) of the river basin. For instance, the basin delineation could be carried out 
-				 through Qgis software (https://docs.qgis.org/3.16/en/docs/training_manual/processing/hydro.html?highlight=hydrological%20analysis).
+0. Subbasin delineation. 
+Before to run the STREAM model, a basin delineation has to be carried out. Once selected the closure sections (Nsect) over the river, this operation allows to identify the subbasins (Nbas) of the river basin. For instance, the basin delineation could be carried out through Qgis software (https://docs.qgis.org/3.16/en/docs/training_manual/processing/hydro.html?highlight=hydrological%20analysis).
 
-				 As output of this step, at each section selected for the analysis as well as at each subbasin should be associated a unique identification
-				 number. See for example the "Mississippi_basin.png" figure.
+As output of this step, at each section selected for the analysis as well as at each subbasin should be associated a unique identification number. See for example the "Mississippi_basin.png" figure.
 				 
        
 1. Preparation of the input data needed for run the STREAM model. The following input data have to be created to run the STREAM model:
