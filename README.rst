@@ -59,7 +59,7 @@ The following files are distributed:
                Cm    = PAR(8,i); % degree-day coefficient for snow module
 
 3. INPUT file (example):
------------------
+
 	3.1 "input.mat": example file for gridded daily data for Mississippi. It contains, basin_data and temperature cells for each sub-basin.
 	"basin_data" contains:
 	     a) date (in numeric Matlab format)
@@ -74,14 +74,16 @@ The following files are distributed:
    
 STEP by STEP PROCEDURE TO RUN STREAM MODEL
 ==========
-1. Subbasin delineation. 
+1. **Subbasin delineation**
+
 	Before to run the STREAM model, a basin delineation has to be carried out. Once selected the closure sections (Nsect) over the river, this operation allows to identify 	the subbasins (Nbas) of the river basin. For instance, the basin delineation could be carried out through Qgis software (https://docs.qgis.org/3.16/en/docs/training_manual/processing/hydro.html?highlight=hydrological%20analysis).
 
 	As output of this step, at each section selected for the analysis as well as at each subbasin should be associated a unique identification number. See for example the "Mississippi_basin.png" figure.
 				 
        
-2. Preparation of the input data needed for run the STREAM model. The following input data have to be created to run the STREAM model:
+2. **Preparation of the input data needed for run the STREAM model** 
 
+The following input data have to be created to run the STREAM model:
 	2.1 "input.mat": .mat struct file of gridded daily data. It contains basin_data and temperature cells for each sub-basin.
 	"basin_data" contains:
 	     a) date (in numeric Matlab format)
@@ -119,7 +121,9 @@ STEP by STEP PROCEDURE TO RUN STREAM MODEL
 
         See for example the "topology_Mississippi.csv" file provided for the Mississippi river basin.
 
-3. Calibration of the model. To calibrate the model, please follow the instruction below:
+3. **Calibration of the model**
+
+To calibrate the model, please follow the instruction below:
 
 	   [X_OPT]=cal_STREAM_semidistributed(input,BAS_PAR,EBRR_BASPAR,sez_outlet,bas_check,ID_bas_app)    
   
@@ -143,7 +147,9 @@ STEP by STEP PROCEDURE TO RUN STREAM MODEL
 	% OUTPUT 
 	% X_OPT: [8 x Nbas] matrix containing, for each subbasin, the calibrated model parameters.
 
-4. Run of the model. To run the model, please follow the instruction below:
+4. **Run of the model**
+
+To run the model, please follow the instruction below:
  	   
            [NS,KGE_sez,KGE_out,Qsim_out,QB_out,rr_tot]=STREAM_semidistributed(input,BAS_PAR,EBRR_BASPAR,X_OPT,sez_outlet,bas_check,ID_bas_app,FIG);
 
