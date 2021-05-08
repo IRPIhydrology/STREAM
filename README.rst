@@ -32,7 +32,7 @@ stefania.camici@irpi.cnr.it
 
 The following files are distributed:
 
-1. M codes:
+1. **M codes**
 
 	1.1 "STREAM_semidistributed.m": STREAM model
 	1.2 " cal_STREAM_semidistributed.m": code for STREAM model calibration (requires optimization toolbox)
@@ -41,7 +41,7 @@ The following files are distributed:
 	1.5 " klinggupta.m": script for computing the kling-Gupta efficiency index
 
 
-2. Auxiliary file:
+2. **Auxiliary file**
 
 	2.1 "Mississippi_basin.png": Mississippi sub-basins and gauging stations;
 	2.2 "topology_Mississippi.csv": topology of Mississippi basin;
@@ -58,7 +58,7 @@ The following files are distributed:
                m     = PAR(7,i); % exponent relationship between slow runoff component and TWSA
                Cm    = PAR(8,i); % degree-day coefficient for snow module
 
-3. INPUT file (example):
+3. **INPUT file (example)**
 
 	3.1 "input.mat": example file for gridded daily data for Mississippi. It contains, basin_data and temperature cells for each sub-basin.
 	"basin_data" contains:
@@ -83,7 +83,7 @@ STEP by STEP PROCEDURE TO RUN STREAM MODEL
        
 2. **Preparation of the input data needed for run the STREAM model** 
 
-The following input data have to be created to run the STREAM model:
+	The following input data have to be created to run the STREAM model:
 	2.1 "input.mat": .mat struct file of gridded daily data. It contains basin_data and temperature cells for each sub-basin.
 	"basin_data" contains:
 	     a) date (in numeric Matlab format)
@@ -123,7 +123,7 @@ The following input data have to be created to run the STREAM model:
 
 3. **Calibration of the model**
 
-To calibrate the model, please follow the instruction below:
+	To calibrate the model, please follow the instruction below:
 
 	   [X_OPT]=cal_STREAM_semidistributed(input,BAS_PAR,EBRR_BASPAR,sez_outlet,bas_check,ID_bas_app)    
   
@@ -149,7 +149,7 @@ To calibrate the model, please follow the instruction below:
 
 4. **Run of the model**
 
-To run the model, please follow the instruction below:
+	To run the model, please follow the instruction below:
  	   
            [NS,KGE_sez,KGE_out,Qsim_out,QB_out,rr_tot]=STREAM_semidistributed(input,BAS_PAR,EBRR_BASPAR,X_OPT,sez_outlet,bas_check,ID_bas_app,FIG);
 
