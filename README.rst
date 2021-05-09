@@ -112,9 +112,8 @@ STEP by STEP PROCEDURE TO RUN STREAM MODEL
 	
         *See, for example the "staz_checkMississippi.mat" file provided for the Mississippi river basin.*
 
-	- distance.txt: [Nbas x Nsect] matrix containing the distance (in km) of each subbasin to the closure sections identified over the river basin. 
-	Basins that not contribute to the closure section have a distance set equal to -1.
-		
+	- distance.txt: [Nbas x Nsect] matrix containing the distance (in km) of each subbasin to the closure sections identified over the river basin. Basins that not contribute to the closure section have a distance set equal to -1.
+	|		
 	*See, for example the "distance_Mississippi.txt" file provided for the Mississippi river basin.*
 
 	- topology.csv: [Nbas x 6] matrix containing:
@@ -134,32 +133,32 @@ STEP by STEP PROCEDURE TO RUN STREAM MODEL
 
 	``[X_OPT]=cal_STREAM_semidistributed(input,BAS_PAR,EBRR_BASPAR,sez_outlet,bas_check,ID_bas_app)``    
   
-	% INPUT
+	*INPUT*
 	
-	% input: .mat struct file with input data (see above for the structure)
+	- input: .mat struct file with input data (see above for the structure)
 	
-	% BAS_PAR: a [3 x 1] vector containing:
+	- BAS_PAR: a [3 x 1] vector containing:
 	
 		- in the 1st row the number of the subbasins (Nbas);
 		- in the 2nd row the number of the section (Nsez);
 		- in the 3rd row the number of the upstream input;
 
-	% EBRR_BASPAR: [Nbas x 14] matrix containing:
+	- EBRR_BASPAR: [Nbas x 14] matrix containing:
 	
 		- in the 1st column the first column of topology file;
 	        - from the 2nd to the Nsect+1 columns the distance as in the distance.txt;
 	        - in the Nsect+2 column the six column of topology file;
 	        - in the Nsect+3 column the fourth column of topology file;
 
-	% sez_outlet: the outlet section for which to carried out the calibration model;
+	- sez_outlet: the outlet section for which to carried out the calibration model;
 	
-	% bas_check : the basin at which sez_outlet belongs;
+	- bas_check : the basin at which sez_outlet belongs;
 	
-	% ID_bas_app: vector indicating the number of the basin to which each section belongs (see above for the structure).
+	- ID_bas_app: vector indicating the number of the basin to which each section belongs (see above for the structure).
 
-	% OUTPUT 
+	*OUTPUT*
 	
-	% X_OPT: [8 x Nbas] matrix containing, for each subbasin, the calibrated model parameters.
+	- X_OPT: [8 x Nbas] matrix containing, for each subbasin, the calibrated model parameters.
 
 4. **Run of the model**
 
@@ -167,7 +166,7 @@ STEP by STEP PROCEDURE TO RUN STREAM MODEL
  	   
         ``[NS,KGE_sez,KGE_out,Qsim_out,QB_out,rr_tot]=STREAM_semidistributed(input,BAS_PAR,EBRR_BASPAR,X_OPT,sez_outlet,bas_check,ID_bas_app,FIG);``
 
-	% INPUT
+	*INPUT*
 	
 	- input:   see above for the structure
 	- BAS_PAR: see above for the structure
@@ -178,16 +177,17 @@ STEP by STEP PROCEDURE TO RUN STREAM MODEL
 	- ID_bas_app: vector indicating the number of the basin to which each section belongs (see above for the structure).
 	- FIG: 1 for making the figure, otherwise no figure
 	
-	
-	% OUTPUT
+	|	
+	*OUTPUT*
 
 	- NS: Nash Sutcliffe Efficiency 
 	- KGE_sez:  Kling Gupta Efficiency for all the Nsect sections over the basin
 	- KGE_out: Kling Gupta Efficiency for the "sez_outlet" section
 	- Qsim_out: Simulated total river discharge
 	- QB_out: Simulated slow-flow river discharge component
-	- rr_tot: Simulated gridded runoff 
-
+	- rr_tot: Simulated gridded runoff
+	
+	|
 	*An example to load the input data, to calibrate and to run the model for the Mississippi river basin can be found within the script: "run_STREAM_semidistributed.m"*   
 
 
