@@ -21,7 +21,7 @@ References
 TUTORIAL for the use of the STREAM CODE
 ==========
 STREAM is a semidistributed conceptual hydrological model for estimating runoff and river discharge from rainfall, soil moisture, air temperature and terrestrial water storage data.
-The STREAM model code is distributed through M language files. It is worth to specify that the model could be run with differents interpreter of M language, like the GNU Octave (freely downloadable here https://www.gnu.org/software/octave/download). To run the code with GNU Octave it is needed to load the packages "statistics" and "optim". 
+The STREAM model code is distributed through M language files. It is worth to specify that the model could be run with different interpreters of M language, like the GNU Octave (freely downloadable here https://www.gnu.org/software/octave/download). To run the code with GNU Octave it is needed to load the packages "statistics" and "optim". 
 The STREAM model can be freely applied and used, please cite [Camici_etal_2021]_.
 The authors are highly interested to collaborate for the understanding of the model functioning and to improve its performance and applicability.
 
